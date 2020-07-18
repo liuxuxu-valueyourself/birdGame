@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      border: 2px solid #008c8c;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .wrap .sky {
+      position: absolute;
+      background-image: url(./img/sky.png);
+      width: 1600px;
+      height: 600px;      
+    }
+    .wrap .land {
+      position: absolute;
+      bottom: 0;
+      background-image: url(./img/land.png);
+      width: 1600px;
+      height: 100px;
+    }
+    .wrap .bird {
+      position: absolute;
+      left: 200px;
+      top: 150px;
+      background-image: url(./img/bird.png);
+      height: 24px;
+      width: 36px;
+      background-position: -7px;
+      z-index: 1;
+    }
+    .wrap .pipeUp {
+      position: absolute;
+      top: 0;
+      left: 800px;
+      background-image: url(./img/pipeDown.png);
+      background-position: bottom;
+      width: 52px;
+      height: 200px;
+    }
+    .wrap .pipeDown {
+      position: absolute;
+      bottom: 100px;
+      left: 800px;
+      background-image: url(./img/pipeUp.png);
+      background-position: top;
+      width: 52px;
+      height: 200px;
+    }
+    .wrap .over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      background: rgba(0,0,0,0.3);
+      color: #ccc;
+      font-size: 66px;
+      text-align: center;
+      display: none;
+    }
+    .wrap .over .again {
+      font-size: 21px;
+    }
+  </style>
+</head>
+<body>
+  分数：<span>0</span>
+  <div>空格跳跃！</div>
+  <div class="wrap">
+    <div class="sky"></div>
+    <div class="land"></div>
+    <div class="bird"></div>
+    <div class="over">
+      GAME OVER!
+      <div class="again">按回车键重新来一局</div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
